@@ -1,0 +1,193 @@
+html {
+	overflow-x: hidden;
+}
+
+/*
+ * HEADER
+ */
+
+header,
+header * {
+	width: 100% !important;
+}
+
+header > nav > h1 {
+	padding: 1.5% 0;
+}
+
+header > nav > h1 > a {
+	font-size: 16pt;
+}
+
+#breadcrumb {
+	width: 100%!important;
+}
+
+#breadcrumb > li {
+	font-size: 18px;
+}
+
+
+/*
+ * MAIN
+*/
+
+#maincontent {
+	width: 100%!important;
+}
+
+/* MAP SECTION */
+
+#map-container {
+	width: 100%!important;
+	position: absolute !important;
+	top: 130px !important;
+	height: 400px !important;
+	z-index: 0; /*prevent the map buttons from overlapping through the header*/
+}
+
+/* RESTAURANT SECTION */
+
+#restaurant-container {
+	width: 100% !important;
+	padding-left: 0;
+	padding-right: 0;
+	padding-top: 540px !important;
+}
+
+#restaurant-name,
+#restaurant-address {
+	text-align: center;
+}
+
+#restaurant-name {
+	font-size: 25pt;
+}
+
+#restaurant-img,
+#restaurant-cuisine {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#restaurant-cuisine {
+	font-size: 19pt;
+}
+
+#restaurant-hours {
+	margin-left: auto;
+	margin-right: auto;
+	border-spacing: 20px 0;
+}
+
+#restaurant-address,
+#restaurant-hours > tr > td {
+	font-size: 16pt;
+}
+
+/* REVIEWS SECTION */
+
+#reviews-container {
+	width: 100% !important;
+	padding-left: 0;
+	padding-right: 0;
+}
+
+#reviews-container > h2 {
+	text-align: center;
+}
+
+#reviews-list > li {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0;
+}
+
+#reviews-list > li > p {
+	font-size: 14pt;
+}
+
+/* this is the bar covering the name and date, giving it its dark color. I could not find any better solution to cover the first two child elements without affecting the other two, and if I set them directly in percentages a white line would display in between when resizing the window*/
+#reviews-list > li > p:first-child::before {
+	background-color: #252831;
+	content:"";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 200%;
+	height: 100%;
+	border-radius: 5px;
+	z-index: -1;
+}
+
+#reviews-list > li > p:first-child {
+	display: inline-block;
+	position: relative;
+	width: 45%;
+	color: white;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	padding-left: 5%;
+	z-index: 1;
+}
+
+#reviews-list > li> p:nth-child(2) {
+	display: inline-block;
+	position: relative;
+	float: right;
+	color: white;
+	width: 50%;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	z-index: 1;
+	text-align: center;
+}
+
+#reviews-list > li> p:nth-child(3) {
+	display: table;
+	padding: 4px 15px;
+	background-color: #ff8c00;
+	color: white;
+	margin-left: 10px;
+}
+
+#reviews-list > li> p:nth-child(4) {
+	padding-left: 20px;
+	padding-right: 20px;
+	text-align: justify;
+}
+
+/*
+ * FOOTER
+*/
+
+#footer {
+	width: 100% !important;
+	padding-left: 0;
+	padding-right: 0;
+	font-size: 11pt;
+}
+
+/*
+ * VIEWPORTS
+ */
+
+@media screen and (min-width: 700px) {
+
+	#map-container {
+		width: 90% !important;
+		left: 5%;
+	}
+}
+
+/*smooth picture transition*/
+@media screen and (min-width: 900px) {
+
+	#restaurant-img,
+	#restaurant-cuisine {
+		width: 800px;
+	}
+}
