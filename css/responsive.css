@@ -1,0 +1,60 @@
+header > nav > h1 {
+	padding: 1.5% 0;
+}
+
+header > nav > h1 > a {
+	font-size: 16pt;
+}
+
+/* the li items don't shrink and the space between them is even*/
+#restaurants-list li {
+	min-width: 270px;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/* I used a grid instead of flex, because I wanted to space them evenly. With flex, the last item would be centered. I tried using a pseudo after element, but it could not account for two elements and the space between them, and setting the margin to 0 misaligned the first column.*/
+#restaurants-list {
+	display: grid;
+    grid-template-columns: repeat(auto-fill, 334px);
+	justify-content: space-evenly;
+}
+
+/*the images are a bit stretched out without this so I unset the min-height*/
+.restaurant-img {
+	min-height: unset !important;
+	background-color: #fff !important;
+	padding-top: 30px;
+}
+
+
+/*the filter buttons don't overlap on small screens*/
+@media screen and (max-width: 460px) {
+
+	.filter-options {
+		padding-bottom: 56px;
+	}
+}
+
+@media screen and (max-width: 700px) {
+
+	header {
+		width: 100%;
+	}
+
+	#breadcrumb {
+		width: 100%;
+	}
+
+	#map-container {
+		width: 100%;
+	}
+
+	#restaurant-container {
+		width: 100% !important;
+	}
+
+	#reviews-container {
+		width: 100%;
+	}
+}
