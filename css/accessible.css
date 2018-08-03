@@ -36,6 +36,7 @@ a:hover {
 }
 
 /*Source for the skip link: https://accessibility.oit.ncsu.edu/it-accessibility-at-nc-state/developers/accessibility-handbook/mouse-and-keyboard-events/skip-to-main-content/ */
+
 a.skip-map {
 	left: -999px;
 	position:absolute;
@@ -61,4 +62,5 @@ a.skip-map:active {
     text-align:center;
     font-size:1.2em;
     z-index:999;
+	margin-top: 136px;
 }
