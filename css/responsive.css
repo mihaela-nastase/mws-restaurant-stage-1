@@ -6,17 +6,34 @@ header > nav > h1 > a {
 	font-size: 16pt;
 }
 
-.filter-options > h2 {
+.filter-options {
 	padding-top: 7px;
+	background-color: #252831;
+	padding-bottom: 33px;
+}
+
+.filter-options > h2 {
 	font-size: 19px;
 }
 
+.filter-options > select {
+	border-radius: 5px;
+	font-size: 12pt;
+}
+
 /* the li items don't shrink and the space between them is even*/
-#restaurants-list li {
+#restaurants-list > li {
 	min-width: 270px;
     margin-left: 0;
     margin-right: 0;
 }
+
+#restaurants-list > li > a {
+	background-color: #6b3b03;
+	font-size: 11pt;
+	text-decoration: none !important;
+}
+
 
 /* I used a grid instead of flex, because I wanted to space them evenly. With flex, the last item would be centered. I tried using a pseudo after element, but it could not account for two elements and the space between them, and setting the margin to 0 misaligned the first column.*/
 #restaurants-list {
@@ -32,6 +49,9 @@ header > nav > h1 > a {
 	padding-top: 30px;
 }
 
+#restaurants-list li > h1 {
+	color: #6b3b03;
+}
 
 /*the filter buttons don't overlap on small screens*/
 @media screen and (max-width: 460px) {
