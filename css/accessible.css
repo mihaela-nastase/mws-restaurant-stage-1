@@ -32,7 +32,7 @@ select:hover {
 
 a:focus,
 a:hover {
-	text-decoration: underline;
+	text-decoration: underline !important;
 }
 
 /*Source for the skip link: https://accessibility.oit.ncsu.edu/it-accessibility-at-nc-state/developers/accessibility-handbook/mouse-and-keyboard-events/skip-to-main-content/ */
