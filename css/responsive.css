@@ -6,6 +6,11 @@ header > nav > h1 > a {
 	font-size: 16pt;
 }
 
+.filter-options > h2 {
+	padding-top: 7px;
+	font-size: 19px;
+}
+
 /* the li items don't shrink and the space between them is even*/
 #restaurants-list li {
 	min-width: 270px;
