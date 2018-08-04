@@ -1,6 +1,6 @@
-# Mobile Web Specialist Certification Course
+# Front-End Web Developer Nanodegree Program
 ---
-#### _Three Stage Course Material Project - Restaurant Reviews_
+#### _Restaurant Reviews_
 
 ## Table of Contents
 
